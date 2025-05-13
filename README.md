@@ -1,27 +1,27 @@
 <h1>Práctica N°5 - Sistema de Gestión de Concesionaria</h1>
 
-<h2>📘 Universidad Politécnica Salesiana</h2>
+<h2>Universidad Politécnica Salesiana</h2>
 <p><strong>Carrera:</strong> Ingeniería en Computación<br>
 <strong>Nivel:</strong> Segundo semestre<br>
 <strong>Asignatura:</strong> Programación Orientada a Objetos<br>
-<strong>Nombre:</strong> Angelo Córdova<br>
+<strong>Estudiante:</strong> Angelo Córdova<br>
 <strong>Grupo:</strong> 3</p>
 
-<h2>🎯 Resultado de Aprendizaje</h2>
-<p>Construye programas utilizando el paradigma de programación orientada a objetos.</p>
+<h2>Resultado de Aprendizaje</h2>
+<p>Construir programas utilizando el paradigma de programación orientada a objetos.</p>
 
-<h3>🧠 Indicador de logro</h3>
+<h2>Indicador de Logro</h2>
 <p>Abstrae objetos del mundo real y los modela mediante diagramas de clase.</p>
 
-<h3>⏳ Tiempo estimado:</h3>
+<h2>Tiempo Estimado</h2>
 <p>2 - 3 horas</p>
 
-<h2>📝 Descripción de la práctica</h2>
+<h2>Descripción de la Práctica</h2>
 <p>Analizar las clases creadas e identificar atributos y métodos. Construir el diagrama de clases respectivo.</p>
 
-<h2>📦 Clases implementadas</h2>
+<h2>Clases Implementadas</h2>
 
-<h3>Clase: <code>cliente</code></h3>
+<h3>Clase: Cliente</h3>
 <pre>
 - dni: QString
 - nombre: QString
@@ -31,7 +31,7 @@
 + getInfo(): QString
 </pre>
 
-<h3>Clase: <code>vehiculo</code></h3>
+<h3>Clase: Vehiculo</h3>
 <pre>
 - codigo: QString
 - marca: QString
@@ -43,45 +43,51 @@
 + getInfo(): QString
 </pre>
 
-<h3>Clase: <code>controlador</code></h3>
+<h3>Clase: Controlador</h3>
 <pre>
-- QVector<vehiculo> vehiculos
-- QVector<cliente> clientes
+- QVector&lt;Vehiculo&gt; vehiculos
+- QVector&lt;Cliente&gt; clientes
 + registrarVehiculo(): void
 + registrarCliente(): void
 + consultar(): void
 </pre>
 
-<h3>Clase: <code>vista</code></h3>
+<h3>Clase: VistaConsola</h3>
 <pre>
 + mostrarMenu(): void
-+ leerTexto(QString): QString
-+ leerOpcion(QString): int
-+ leerDecimal(QString): double
++ leerTexto(QString mensaje): QString
++ leerOpcion(QString mensaje): int
++ leerDecimal(QString mensaje): double
 </pre>
 
-<h2>▶️ Aplicación principal</h2>
+<h2>Aplicación Principal</h2>
 <pre>
-main.cpp
----------
 int main() {
-    mostrarMenu();
-    ejecutarOpcion();
+    VistaConsola::mostrarMenu();
+    int opcion = VistaConsola::leerOpcion("Seleccione una opción: ");
+    switch (opcion) {
+        case 1: ctrl.registrarVehiculo(); break;
+        case 2: ctrl.registrarCliente(); break;
+        case 3: ctrl.consultar(); break;
+        case 4: qInfo("Saliendo del sistema..."); break;
+        default: qInfo("Opción no válida.");
+    }
 }
 </pre>
 
-<h2>📊 Diagrama de Clases</h2>
-<p><img src="diagrama.png" alt="Diagrama de Clases UML" width="600"></p>
+<h2>Diagrama de Clases</h2>
+<p><img src="diagrama.png" alt="Diagrama de Clases UML" width="700"></p>
 
-<h2>✅ Resultados Obtenidos</h2>
+<h2>Resultados Obtenidos</h2>
 <ul>
-  <li>Se creó un sistema funcional con patrón MVC usando Qt y C++</li>
-  <li>Se logró separar correctamente el modelo, vista y lógica</li>
-  <li>Los registros se almacenan correctamente y se pueden consultar</li>
+  <li>Se construyó un sistema MVC para registrar vehículos y clientes.</li>
+  <li>Se utilizó el lenguaje C++ con Qt para la estructura de clases.</li>
+  <li>Se aplicó encapsulamiento y manejo de vectores de objetos.</li>
+  <li>La vista mostró el menú y los datos se gestionaron correctamente.</li>
 </ul>
 
-<h2>📌 Conclusión</h2>
-<p>La práctica permitió aplicar los principios de programación orientada a objetos de forma modular y organizada, fortaleciendo el uso del patrón MVC y el manejo de clases en C++ usando Qt.</p>
+<h2>Conclusión</h2>
+<p>Esta práctica permitió consolidar el conocimiento de la programación orientada a objetos, aplicando los principios del modelo MVC, uso de clases, encapsulamiento, vectores, y separación de responsabilidades.</p>
 
-<h2>❗ Dificultades encontradas</h2>
-<p>Se presentó dificultad al subir los archivos a GitHub mediante Git Bash. Sin embargo, con apoyo externo se logró resolver y subir correctamente todos los archivos del proyecto.</p>
+<h2>Dificultades Encontradas</h2>
+<p>La principal dificultad fue al momento de realizar el enlace entre Git y GitHub usando la terminal. Sin embargo, con seguimiento paso a paso, el proyecto fue correctamente subido y documentado.</p>
