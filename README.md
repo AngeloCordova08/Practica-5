@@ -78,16 +78,5 @@ int main() {
 <h2>Diagrama de Clases</h2>
 <p><img src="diagrama.png" alt="Diagrama de Clases UML" width="700"></p>
 
-<h2>Resultados Obtenidos</h2>
-<ul>
-  <li>Se construyó un sistema MVC para registrar vehículos y clientes.</li>
-  <li>Se utilizó el lenguaje C++ con Qt para la estructura de clases.</li>
-  <li>Se aplicó encapsulamiento y manejo de vectores de objetos.</li>
-  <li>La vista mostró el menú y los datos se gestionaron correctamente.</li>
-</ul>
-
-<h2>Conclusión</h2>
-<p>Esta práctica permitió consolidar el conocimiento de la programación orientada a objetos, aplicando los principios del modelo MVC, uso de clases, encapsulamiento, vectores, y separación de responsabilidades.</p>
-
 <h2>Dificultades Encontradas</h2>
 <p>La principal dificultad fue al momento de realizar el enlace entre Git y GitHub usando la terminal. Sin embargo, con seguimiento paso a paso, el proyecto fue correctamente subido y documentado.</p>
